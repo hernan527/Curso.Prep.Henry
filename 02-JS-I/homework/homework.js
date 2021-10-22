@@ -148,26 +148,26 @@ function elevarAlCubo(num) {
 function elevar(num, exponent) {
   // Devuelve el valor de "num" elevado al exponente dado en "exponent"
   // Tu código:
-let elevar = Math.pow;
   return Math.pow(num, exponent);
 }
 
 function redondearNumero(num) {
   // Redondea "num" al entero más próximo y devuélvelo
   // Tu código:
+  return Math.round(num)
   
 }
 
 function redondearHaciaArriba(num) {
   // Redondea "num" hacia arriba (al próximo entero) y devuélvelo
   // Tu código:
-  
+  return Math.ceil(num)
 }
 
 function numeroRandom() {
   //Generar un número al azar entre 0 y 1 y devolverlo
   //Pista: investigá qué hace el método Math.random()
-  
+  return Math.random()
 }
 
 function esPositivo(numero) {
@@ -175,32 +175,54 @@ function esPositivo(numero) {
   //Si el número es positivo, devolver ---> "Es positivo"
   //Si el número es negativo, devolver ---> "Es negativo"
   //Si el número es 0, devuelve false
-  
-}
+  const positivo = 'Es positivo'
+  const negativo = 'Es negativo'
+   if(numero>0){
+   return positivo;
+   }
+   if(numero<0){
+   return negativo;
+   }
+   else{
+   return false
+   }
+   }
+
+
 
 function agregarSimboloExclamacion(str) {
   // Agrega un símbolo de exclamación al final de la string "str" y devuelve una nueva string
   // Ejemplo: "hello world" pasaría a ser "hello world!"
   // Tu código:
+  const SimboloExclamacion = '!'
+  var agregar = str + SimboloExclamacion
+  return agregar;
 }
+
 
 function combinarNombres(nombre, apellido) {
   // Devuelve "nombre" y "apellido" combinados en una string y separados por un espacio.
   // Ejemplo: "Soy", "Henry" -> "Soy Henry"
   // Tu código:
-  
+  var saludo = nombre + " " + apellido
+    return saludo
 }
 
 function obtenerSaludo(nombre) {
   // Toma la string "nombre" y concatena otras string en la cadena para que tome la siguiente forma:
   // "Martin" -> "Hola Martin!"
   // Tu código:
-  
+  var str1 = 'Hola'
+  var str2 = '!'
+  var saludo = str1+" "+nombre+str2
+  return saludo;
 }
 
 function obtenerAreaRectangulo(alto, ancho) {
   // Retornar el area de un rectángulo teniendo su altura y ancho
   // Tu código:
+  const area = alto*ancho;
+  return area
   
 }
 
@@ -208,13 +230,16 @@ function obtenerAreaRectangulo(alto, ancho) {
 function retornarPerimetro(lado){
   //Escibe una función a la cual reciba el valor del lado de un cuadrado y retorne su perímetro.
   //Escribe tu código aquí
-  
+  const perimetro = lado*4;
+  return perimetro
 }
 
 
 function areaDelTriangulo(base, altura){
   //Desarrolle una función que calcule el área de un triángulo.
   //Escribe tu código aquí
+  const area = base*altura/2
+  return area
 
 }
 
@@ -223,18 +248,31 @@ function deEuroAdolar(euro){
   //Supongamos que 1 euro equivale a 1.20 dólares. Escribe un programa que reciba
   //como parámetro un número de euros y calcule el cambio en dólares.
   //Escribe tu código aquí
-  
+  const cambio = euro*1.2
+  return cambio
 }
 
 
 function esVocal(letra){
-  //Escribe una función que reciba una letra y, si es una vocal, muestre el mensaje “Es vocal”. 
-  //Verificar si el usuario ingresó un string de más de un carácter, en ese caso, informarle 
+  //Escribe una función que reciba una letra y, si es una vocal, muestre el mensaje “Es vocal”.
+  //Verificar si el usuario ingresó un string de más de un carácter, en ese caso, informarle
   //que no se puede procesar el dato mediante el mensaje "Dato incorrecto".
   // Si no es vocal, tambien debe devolver "Dato incorrecto".
   //Escribe tu código aquí
-  
+   const vocales = ["a", "e", "i", "o", "u","A", "E", "I", "O", "U"]
+   var str1 = "Dato incorrecto"
+   var str2 = "Es vocal"        
+   if (letra.length>1){
+ return str1;
+} 
+if (vocales.indexOf(letra) >= 0) {
+    return str2;
+    } else {
+    return str1;
+    }
 }
+
+
 
 
 
